@@ -43,15 +43,7 @@ GCV based model method and basics of gamm; 2017 for overview; 2003 for thin plat
   65(1):95-114.
 ```
 
-##
-
-Certainly! I'll adjust the example data sizes in the `README.md` content to reflect data for 20 entries instead of 10, and I'll modify the installation instructions to guide users on installing the package using `setup.py`, assuming your package is structured in a way that includes this file.
-
-### Updated README.md Content
-
----
-
-## SmoothConTransformer
+## Details: SmoothConTransformer
 
 The `SmoothConTransformer` class interfaces with R's `mgcv` package via `rpy2` to utilize smoothing functions for statistical modeling in Python. 
 It provides methods to fit models, transform data, and retrieve important objects like the design matrix and penalty matrices.
