@@ -14,8 +14,8 @@ At least for me, the currently available alternatives in Python are insufficient
 To install this package, clone the repository and install it using `setup.py`:
 
 ```bash
-git clone https://your-repository-url.git
-cd your-repository-directory
+git clone https://github.com/davidruegamer/pymgcv.git
+cd pymgcv
 pip install .
 ```
 
