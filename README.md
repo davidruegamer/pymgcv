@@ -6,8 +6,8 @@ This package is currently under development.
 
 ## Goal
 
-The ulterior goal would be to have a clone of mgcv in Python with little overhead.
-At least for me, the currently available alternatives in Python are not sufficient.
+The ultimate goal is to create a clone of mgcv in Python with minimal overhead. 
+At least for me, the currently available alternatives in Python are insufficient.
 
 ## Features
 
