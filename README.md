@@ -43,3 +43,96 @@ GCV based model method and basics of gamm; 2017 for overview; 2003 for thin plat
   65(1):95-114.
 ```
 
+##
+
+Certainly! I'll adjust the example data sizes in the `README.md` content to reflect data for 20 entries instead of 10, and I'll modify the installation instructions to guide users on installing the package using `setup.py`, assuming your package is structured in a way that includes this file.
+
+### Updated README.md Content
+
+---
+
+## SmoothConTransformer
+
+The `SmoothConTransformer` class interfaces with R's `mgcv` package via `rpy2` to utilize smoothing functions for statistical modeling in Python. 
+It provides methods to fit models, transform data, and retrieve important objects like the design matrix and penalty matrices.
+
+### Installation
+
+To install this package, clone the repository and install it using `setup.py`:
+
+```bash
+git clone https://your-repository-url.git
+cd your-repository-directory
+pip install .
+```
+
+This will install the package along with its dependencies.
+
+### Usage
+
+Here's how to use the `SmoothConTransformer`:
+
+#### Importing the Class
+
+```python
+from my_package_name import SmoothConTransformer
+```
+
+#### Initializing the Transformer
+
+```python
+transformer = SmoothConTransformer()
+```
+
+#### Fitting the Model
+
+To fit the model, you need a formula and a dataset. Here is an example of fitting the transformer with a dataset of size 20:
+
+```python
+import pandas as pd
+
+# Sample data
+data = pd.DataFrame({
+    'x': range(20),
+    'y': [xi**2 for xi in range(20)]  # Quadratic relationship
+})
+
+# Fit the model using a thin plate regression spline
+transformer.fit(obj="s(x)", data=data)
+```
+
+#### Transforming Data
+
+After fitting, you can apply the transformation to new data:
+
+```python
+# New sample data
+new_data = pd.DataFrame({
+    'x': range(20, 40)
+})
+
+# Transform the data
+transformed_data = transformer.transform(data=new_data)
+print(transformed_data)
+```
+
+#### Retrieving the Design Matrix
+
+Get the design matrix as a NumPy array:
+
+```python
+design_matrix = transformer.get_design()
+print(design_matrix)
+```
+
+#### Retrieving the Penalty Matrices
+
+Get the penalty matrices as a list of NumPy arrays:
+
+```python
+penalty_matrices = transformer.get_penalty()
+for mat in penalty_matrices:
+    print(mat)
+```
+
+
