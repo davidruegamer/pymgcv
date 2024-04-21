@@ -1,4 +1,4 @@
-# Python translation of some of the functionality included in the famous `mgcv` R package
+# Python translation of some of the functionalities in the famous `mgcv` R package
 
 ## Status
 
