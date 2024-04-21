@@ -9,6 +9,18 @@ This package is currently under development.
 The ultimate goal is to create a clone of mgcv in Python with minimal overhead. 
 At least for me, the currently available alternatives in Python are insufficient.
 
+## Installation
+
+To install this package, clone the repository and install it using `setup.py`:
+
+```bash
+git clone https://your-repository-url.git
+cd your-repository-directory
+pip install .
+```
+
+This will install the package along with its dependencies.
+
 ## Features
 
 ### Log
@@ -43,24 +55,12 @@ GCV based model method and basics of gamm; 2017 for overview; 2003 for thin plat
   65(1):95-114.
 ```
 
-## Details: SmoothConTransformer
+## Details
+
+### SmoothConTransformer
 
 The `SmoothConTransformer` class interfaces with R's `mgcv` package via `rpy2` to utilize smoothing functions for statistical modeling in Python. 
 It provides methods to fit models, transform data, and retrieve important objects like the design matrix and penalty matrices.
-
-### Installation
-
-To install this package, clone the repository and install it using `setup.py`:
-
-```bash
-git clone https://your-repository-url.git
-cd your-repository-directory
-pip install .
-```
-
-This will install the package along with its dependencies.
-
-### Usage
 
 Here's how to use the `SmoothConTransformer`:
 
